@@ -5,9 +5,6 @@ import akka.testkit.TestActorRef
 import com.akkademo.messages.SetRequest
 import org.scalatest.{BeforeAndAfterEach, Matchers, FunSpecLike}
 
-/**
-  * Created by admin on 10.08.16.
-  */
 class LasMesActorSpec extends FunSpecLike with Matchers with BeforeAndAfterEach {
 
   implicit val system = ActorSystem()

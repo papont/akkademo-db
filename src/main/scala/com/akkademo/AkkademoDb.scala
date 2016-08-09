@@ -6,9 +6,7 @@ import com.akkademo.messages.SetRequest
 
 import scala.collection.mutable.HashMap
 
-/**
- * Created by user on 09.08.2016.
- */
+
 class AkkademoDb extends Actor {
 
   val map = new HashMap[String, Object]

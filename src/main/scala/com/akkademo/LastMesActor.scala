@@ -6,9 +6,7 @@ import com.akkademo.messages.SetRequest
 
 import scala.collection.mutable.HashMap
 
-/**
-  * Created by admin on 10.08.16.
-  */
+
 class LastMesActor extends Actor {
 
   var map = new HashMap[String, Object]
