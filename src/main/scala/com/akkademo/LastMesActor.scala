@@ -7,16 +7,19 @@ import com.akkademo.messages.SetRequest
 import scala.collection.mutable.HashMap
 
 /**
- * Created by user on 09.08.2016.
- */
-class AkkademoDb extends Actor {
+  * Created by admin on 10.08.16.
+  */
+class LastMesActor extends Actor {
 
-  val map = new HashMap[String, Object]
+  var map = new HashMap[String, Object]
   val log = Logging(context.system, this)
 
   override def receive: Receive = {
     case SetRequest(key, value) => {
       log.info("receive setRequest - key: {} value: {}", key, value)
+
+      if (!map.isEmpty) map.clear()
+
       map.put(key, value)
     }
     case o => log.info("received unknown message: {}", o)
